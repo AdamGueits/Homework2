@@ -83,7 +83,7 @@ public class Main {
 		btn.setBounds(161, 141, 144, 23);
 		frame.getContentPane().add(btn);
 	}
-
+//Method to Find Largest Block in Input
 	private static int getLargestBlockLength(String password) {
 		int maxBlockLength = 0;
 		int currentBlockLength = 1;
@@ -102,20 +102,20 @@ public class Main {
 		if (currentBlockLength > maxBlockLength) {
 			maxBlockLength = currentBlockLength;
 		}
-
+//Returns length of largest block
 		return maxBlockLength;
 	}
-
+//Method to check password when button is pressed
 	private void buttonPress() {
 		btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String password = passIn.getText();
-				System.out.println(password);
+				//Checks password length to meet requirements
 				if (password.length() < 8 || password.length() > 12) {
 					outputArea.setText("Error: Password must be between 8 and 12 characters.");
 					return;
 				}
-
+				//Checks for spaces
 				if (password.contains(" ")) {
 					outputArea.setText("Error: Password must not contain spaces.");
 					return;
