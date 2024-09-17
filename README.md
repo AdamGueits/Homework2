@@ -1,1 +1,1 @@
-Here are the project folders for Homwork 2
+Here are the project folders for Homework 2
